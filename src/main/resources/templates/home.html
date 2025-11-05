@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <title>Library Home</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<header>
+    <h1>Welcome to the Library Management System</h1>
+    <p th:text="'Logged in as: ' + ${#authentication.name}"></p>
+
+    <nav>
+        <a th:href="@{/}">Home</a> |
+        <a th:href="@{/about}">About</a> |
+        <a th:href="@{/books/public}">Public Books</a> |
+        <a sec:authorize="hasAnyRole('STUDENT','LIBRARIAN','ADMIN')" th:href="@{/books}">Books</a> |
+        <a sec:authorize="hasRole('LIBRARIAN')" th:href="@{/reservations}">Reservations</a> |
+        <a sec:authorize="hasRole('ADMIN')" th:href="@{/users}">Users</a> |
+        <a sec:authorize="hasRole('ADMIN')" th:href="@{/admin/reports}">Admin Reports</a> |
+        <a sec:authorize="isAuthenticated()" th:href="@{/profile}">Profile</a> |
+        <a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a>
+        <a sec:authorize="isAnonymous()" th:href="@{/login}">Login</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Home Page</h2>
+    <p>Welcome to our library management system. Please log in to access more features.</p>
+</main>
+</body>
+</html>
