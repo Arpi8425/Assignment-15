@@ -1,0 +1,190 @@
+2025-09-02 10:34:37.850 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-09-02 10:34:37.873 [main] INFO  c.e.bankingapi.BankingapiApplication - Starting BankingapiApplication using Java 24.0.2 with PID 21795 (/Users/TANISH.M/Downloads/jwtlogging/target/classes started by TANISH.M in /Users/TANISH.M/Downloads/jwtlogging)
+2025-09-02 10:34:37.874 [main] INFO  c.e.bankingapi.BankingapiApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-02 10:34:38.191 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-02 10:34:38.244 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+2025-09-02 10:34:38.495 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-09-02 10:34:38.498 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-02 10:34:38.499 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-02 10:34:38.499 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-09-02 10:34:38.533 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-02 10:34:38.534 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 632 ms
+2025-09-02 10:34:38.546 [main] ERROR o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'jwtAuthFilter': Error creating bean with name 'jwtAuthFilter': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2025-09-02 10:34:38.555 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-09-02 10:34:38.560 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-09-02 10:34:38.564 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-02 10:34:38.569 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  jwtAuthFilter (field private org.springframework.security.core.userdetails.UserDetailsService com.example.bankingapi.config.JwtAuthFilter.userDetailsService)
+↑     ↓
+|  securityConfig (field private com.example.bankingapi.config.JwtAuthFilter com.example.bankingapi.config.SecurityConfig.jwtAuthFilter)
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-09-02 10:35:26.267 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-09-02 10:35:26.278 [main] INFO  c.e.bankingapi.BankingapiApplication - Starting BankingapiApplication using Java 24.0.2 with PID 21805 (/Users/TANISH.M/Downloads/jwtlogging/target/classes started by TANISH.M in /Users/TANISH.M/Downloads/jwtlogging)
+2025-09-02 10:35:26.278 [main] INFO  c.e.bankingapi.BankingapiApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-02 10:35:26.480 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-02 10:35:26.500 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2025-09-02 10:35:26.681 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-09-02 10:35:26.684 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-02 10:35:26.684 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-02 10:35:26.685 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-09-02 10:35:26.717 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-02 10:35:26.717 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 416 ms
+2025-09-02 10:35:26.730 [main] ERROR o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'jwtAuthFilter': Error creating bean with name 'jwtAuthFilter': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2025-09-02 10:35:26.738 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-09-02 10:35:26.742 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-09-02 10:35:26.746 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-02 10:35:26.750 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  jwtAuthFilter (field private org.springframework.security.core.userdetails.UserDetailsService com.example.bankingapi.config.JwtAuthFilter.userDetailsService)
+↑     ↓
+|  securityConfig (field private com.example.bankingapi.config.JwtAuthFilter com.example.bankingapi.config.SecurityConfig.jwtAuthFilter)
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-09-02 10:35:54.773 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-09-02 10:35:54.787 [main] INFO  c.e.bankingapi.BankingapiApplication - Starting BankingapiApplication using Java 24.0.2 with PID 21835 (/Users/TANISH.M/Downloads/jwtlogging/target/classes started by TANISH.M in /Users/TANISH.M/Downloads/jwtlogging)
+2025-09-02 10:35:54.787 [main] INFO  c.e.bankingapi.BankingapiApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-02 10:35:54.993 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-02 10:35:55.011 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2025-09-02 10:35:55.190 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-09-02 10:35:55.193 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-02 10:35:55.193 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-02 10:35:55.193 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-09-02 10:35:55.225 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-02 10:35:55.225 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 416 ms
+2025-09-02 10:35:55.238 [main] ERROR o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'jwtAuthFilter': Error creating bean with name 'jwtAuthFilter': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2025-09-02 10:35:55.247 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-09-02 10:35:55.252 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-09-02 10:35:55.255 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-02 10:35:55.260 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  jwtAuthFilter (field private org.springframework.security.core.userdetails.UserDetailsService com.example.bankingapi.config.JwtAuthFilter.userDetailsService)
+↑     ↓
+|  securityConfig (field private com.example.bankingapi.config.JwtAuthFilter com.example.bankingapi.config.SecurityConfig.jwtAuthFilter)
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-09-02 10:37:12.219 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-09-02 10:37:12.237 [main] INFO  c.e.bankingapi.BankingapiApplication - Starting BankingapiApplication using Java 24.0.2 with PID 22560 (/Users/TANISH.M/Downloads/jwtlogging/target/classes started by TANISH.M in /Users/TANISH.M/Downloads/jwtlogging)
+2025-09-02 10:37:12.237 [main] INFO  c.e.bankingapi.BankingapiApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-02 10:37:12.473 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-02 10:37:12.491 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2025-09-02 10:37:12.675 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-09-02 10:37:12.677 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-02 10:37:12.678 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-02 10:37:12.678 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-09-02 10:37:12.712 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-02 10:37:12.712 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 446 ms
+2025-09-02 10:37:12.726 [main] ERROR o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'jwtAuthFilter': Error creating bean with name 'jwtAuthFilter': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2025-09-02 10:37:12.734 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-09-02 10:37:12.738 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-09-02 10:37:12.741 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-02 10:37:12.746 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  jwtAuthFilter (field private org.springframework.security.core.userdetails.UserDetailsService com.example.bankingapi.config.JwtAuthFilter.userDetailsService)
+↑     ↓
+|  securityConfig (field private com.example.bankingapi.config.JwtAuthFilter com.example.bankingapi.config.SecurityConfig.jwtAuthFilter)
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-09-02 10:38:02.298 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-09-02 10:38:02.310 [main] INFO  c.e.bankingapi.BankingapiApplication - Starting BankingapiApplication using Java 24.0.2 with PID 22659 (/Users/TANISH.M/Downloads/jwtlogging/target/classes started by TANISH.M in /Users/TANISH.M/Downloads/jwtlogging)
+2025-09-02 10:38:02.311 [main] INFO  c.e.bankingapi.BankingapiApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-02 10:38:02.524 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-02 10:38:02.542 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2025-09-02 10:38:02.723 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-09-02 10:38:02.726 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-02 10:38:02.726 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-02 10:38:02.726 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-09-02 10:38:02.759 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-02 10:38:02.759 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 426 ms
+2025-09-02 10:38:02.772 [main] ERROR o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'jwtAuthFilter': Error creating bean with name 'jwtAuthFilter': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2025-09-02 10:38:02.780 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-09-02 10:38:02.784 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-09-02 10:38:02.788 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-02 10:38:02.793 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  jwtAuthFilter (field private org.springframework.security.core.userdetails.UserDetailsService com.example.bankingapi.config.JwtAuthFilter.userDetailsService)
+↑     ↓
+|  securityConfig (field private com.example.bankingapi.config.JwtAuthFilter com.example.bankingapi.config.SecurityConfig.jwtAuthFilter)
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
